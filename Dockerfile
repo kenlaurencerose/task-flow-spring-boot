@@ -9,6 +9,6 @@ RUN gradle build --no-daemon
 #
 # Package stage
 #
-FROM eclipse-temurin:25-jdk-jammy
+FROM eclipse-temurin:21-jdk-jammy
 COPY --from=build /home/gradle/src/build/libs/task-flow-spring-boot.jar app.jar
 ENTRYPOINT ["java","-jar","/app.jar"]

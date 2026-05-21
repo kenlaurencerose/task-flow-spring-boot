@@ -11,5 +11,5 @@ LABEL org.name="ProfWider"
 # Package stage
 #
 FROM eclipse-temurin:25-jdk-jammy
-COPY --from=build /home/gradle/src/build/libs/task-flow-spring-boot-0.0.1-SNAPSHOT.jar app.jar
+COPY --from=build /home/gradle/src/build/libs/task-flow-spring-boot.jar app.jar
 ENTRYPOINT ["java","-jar","/app.jar"]

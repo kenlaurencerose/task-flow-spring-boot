@@ -23,8 +23,8 @@ public class TaskController {
     }
 
     @GetMapping("/")
-    public String index() {
-        return "Das Backend läuft perfekt nach den Vorgaben des Profs!";
+    public List<Task> getAllTasks() {
+        return service.getAll();
     }
 
     @GetMapping("/tasks/{id}")
@@ -34,4 +34,3 @@ public class TaskController {
 
     }
 }
-//.

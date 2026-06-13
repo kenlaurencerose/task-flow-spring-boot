@@ -22,6 +22,11 @@ public class TaskController {
         return service.save(task);
     }
 
+    @GetMapping("/")
+    public String index() {
+        return "Das Backend läuft perfekt nach den Vorgaben des Profs!";
+    }
+
     @GetMapping("/tasks/{id}")
     public Task getTasks(@PathVariable String id){
     Long taskId = Long.parseLong(id);

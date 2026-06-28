@@ -25,4 +25,7 @@ public class TaskService {
         return (List<Task>) repo.findAll();
     }
 
+    public void delete(Long id) {
+        repo.deleteById(id);
+    }
 }

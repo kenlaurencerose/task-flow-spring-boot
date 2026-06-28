@@ -28,4 +28,10 @@ public class TaskService {
     public void delete(Long id) {
         repo.deleteById(id);
     }
+
+    public Task updateStatus(Long id, String newStatus) {
+        Task task = repo.findById(id).orElseThrow(() -> new RuntimeException("Task nicht gefunden"));
+        task.setStatus(newStatus);
+        return repo.save(task);
+    }
 }

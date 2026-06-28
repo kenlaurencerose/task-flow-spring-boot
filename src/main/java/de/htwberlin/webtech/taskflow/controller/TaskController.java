@@ -35,4 +35,10 @@ public class TaskController {
         Long taskId = Long.parseLong(id);
         service.delete(taskId);
     }
+
+    @PutMapping("/tasks/{id}/status")
+    public Task updateTaskStatus(@PathVariable String id, @RequestBody String newStatus) {
+        Long taskId = Long.parseLong(id);
+        return service.updateStatus(taskId, newStatus);
+    }
 }

@@ -41,4 +41,9 @@ public class TaskController {
         Long taskId = Long.parseLong(id);
         return service.updateStatus(taskId, newStatus);
     }
+
+    @DeleteMapping("/tasks")
+    public void deleteAllTasks() {
+        service.deleteAll();
+    }
 }

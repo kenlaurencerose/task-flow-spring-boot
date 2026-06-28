@@ -34,4 +34,8 @@ public class TaskService {
         task.setStatus(newStatus);
         return repo.save(task);
     }
+
+    public void deleteAll() {
+        repo.deleteAll();
+    }
 }
